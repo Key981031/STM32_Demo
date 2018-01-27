@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,9 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{16B32A1A-2DEF-4D62-B28C-DADE9F977562}</ProjectGuid>
-    <RootNamespace>STM32Demo</RootNamespace>
+    <ProjectGuid>{2e82f0bd-b835-4002-a24e-13212ad1ebc1}</ProjectGuid>
+    <RootNamespace>STM32_Demo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -69,13 +68,16 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\Program Files (x86)\Windows Kits\10\Include\10.0.14393.0\ucrt;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>STM32F40_41xxx;USE_STDPERIPH_DRIVER;__CC_ARM;__FPU_USED;__FPU_PRESENT;ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Code\BSP\SYSTEM;$(ProjectDir)\Code\BSP\SYSTEM\delay;$(ProjectDir)\Code\BSP\SYSTEM\usart;$(ProjectDir)\Code\BSP\SYSTEM\sys;$(ProjectDir)\Code\STLIB\CMSIS;$(ProjectDir)\Code\STLIB\CMSIS\CORE;$(ProjectDir)\Code\STLIB\CMSIS\STARTUP;$(ProjectDir)\Code\STLIB\DSPLIB;$(ProjectDir)\Code\STLIB\DSPLIB\Include;$(ProjectDir)\Code\STLIB\FWLIB\inc;$(ProjectDir)\Code\STLIB;$(ProjectDir)\Code\uCOSIII\uCOS_CONFIG;$(ProjectDir)\Code\uCOSIII\uCOS_LIB;$(ProjectDir)\Code\uCOSIII\uCOS_III\Source;$(ProjectDir)\Code\uCOSIII\uCOS_III;$(ProjectDir)\Code\uCOSIII\uCOS_CPU;$(ProjectDir)\Code\uCOSIII\uCOS_BSP;$(ProjectDir)\Code\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -83,7 +85,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Code\BSP\SYSTEM;$(ProjectDir)\Code\BSP\SYSTEM\delay;$(ProjectDir)\Code\BSP\SYSTEM\usart;$(ProjectDir)\Code\BSP\SYSTEM\sys;$(ProjectDir)\Code\STLIB\CMSIS;$(ProjectDir)\Code\STLIB\CMSIS\CORE;$(ProjectDir)\Code\STLIB\CMSIS\STARTUP;$(ProjectDir)\Code\STLIB\DSPLIB;$(ProjectDir)\Code\STLIB\DSPLIB\Include;$(ProjectDir)\Code\STLIB\FWLIB\inc;$(ProjectDir)\Code\STLIB;$(ProjectDir)\Code\uCOSIII\uCOS_CONFIG;$(ProjectDir)\Code\uCOSIII\uCOS_LIB;$(ProjectDir)\Code\uCOSIII\uCOS_III\Source;$(ProjectDir)\Code\uCOSIII\uCOS_III;$(ProjectDir)\Code\uCOSIII\uCOS_CPU;$(ProjectDir)\Code\uCOSIII\uCOS_BSP;$(ProjectDir)\Code\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>STM32F40_41xxx;USE_STDPERIPH_DRIVER;__CC_ARM;__FPU_USED;__FPU_PRESENT;ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -93,7 +96,6 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -107,7 +109,6 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -115,6 +116,233 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Code\APP\ANO_DT\ANO_DT.h" />
+    <ClInclude Include="Code\APP\ANO_DT\ANO_DT_User_Settings.h" />
+    <ClInclude Include="Code\APP\Control\PID\PID_Control.h" />
+    <ClInclude Include="Code\APP\Control\PID\PID_forward.h" />
+    <ClInclude Include="Code\APP\Control\PID\PID_Parameter.h" />
+    <ClInclude Include="Code\APP\DataStructure\Queue\Queue.h" />
+    <ClInclude Include="Code\APP\Display\Display.h" />
+    <ClInclude Include="Code\APP\IMU\IMU.h" />
+    <ClInclude Include="Code\APP\Math\My_Math.h" />
+    <ClInclude Include="Code\APP\Math\Vect\Vect.h" />
+    <ClInclude Include="Code\APP\Sensor_Param\Sensor_Param.h" />
+    <ClInclude Include="Code\APP\Task_Loop\Task_Loop.h" />
+    <ClInclude Include="Code\APP\Uart_Command\Uart_Command.h" />
+    <ClInclude Include="Code\APP\Uart_Command\Uart_Command_Dispose.h" />
+    <ClInclude Include="Code\BSP\AK8975\AK8975.h" />
+    <ClInclude Include="Code\BSP\BEEP\BEEP.h" />
+    <ClInclude Include="Code\BSP\Encoder\Encoder.h" />
+    <ClInclude Include="Code\BSP\KEY\KEY.h" />
+    <ClInclude Include="Code\BSP\LED\LED.h" />
+    <ClInclude Include="Code\BSP\MCU\CAN\can.h" />
+    <ClInclude Include="Code\BSP\MCU\FLASH\stmflash.h" />
+    <ClInclude Include="Code\BSP\MCU\IIC_Soft\IIC_Soft.h" />
+    <ClInclude Include="Code\BSP\MCU\SysTick\SysTick.h" />
+    <ClInclude Include="Code\BSP\MCU\Timer\Timer.h" />
+    <ClInclude Include="Code\BSP\MCU\UART\usart2.h" />
+    <ClInclude Include="Code\BSP\MCU\UART\usart3.h" />
+    <ClInclude Include="Code\BSP\MCU\UART\uart4.h" />
+    <ClInclude Include="Code\BSP\Motor_Drive\Moto_Drive.h" />
+    <ClInclude Include="Code\BSP\MPU6050\MPU6050.h" />
+    <ClInclude Include="Code\BSP\My_BSP.h" />
+    <ClInclude Include="Code\BSP\OLED\OLED.h" />
+    <ClInclude Include="Code\BSP\OLED\OLED_Fonts.h" />
+    <ClInclude Include="Code\BSP\SYSTEM\DataConverTypeDef.h" />
+    <ClInclude Include="Code\BSP\SYSTEM\delay\delay.h" />
+    <ClInclude Include="Code\BSP\SYSTEM\My_Flag.h" />
+    <ClInclude Include="Code\BSP\SYSTEM\sys\sys.h" />
+    <ClInclude Include="Code\BSP\SYSTEM\usart\Printf_Uart.h" />
+    <ClInclude Include="Code\BSP\Time\Time.h" />
+    <ClInclude Include="Code\STLIB\CMSIS\CORE\core_cm4.h" />
+    <ClInclude Include="Code\STLIB\CMSIS\CORE\core_cm4_simd.h" />
+    <ClInclude Include="Code\STLIB\CMSIS\CORE\core_cmFunc.h" />
+    <ClInclude Include="Code\STLIB\CMSIS\CORE\core_cmInstr.h" />
+    <ClInclude Include="Code\STLIB\CMSIS\stm32f4xx.h" />
+    <ClInclude Include="Code\STLIB\CMSIS\system_stm32f4xx.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\arm_common_tables.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\arm_const_structs.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\arm_math.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm0.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm0plus.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm3.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm4.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm4_simd.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cmFunc.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cmInstr.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_sc000.h" />
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_sc300.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\misc.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_adc.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_can.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_crc.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_cryp.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dac.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dbgmcu.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dcmi.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dma.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dma2d.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_exti.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_flash.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_flash_ramfunc.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_fmc.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_fsmc.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_gpio.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_hash.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_i2c.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_iwdg.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_ltdc.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_pwr.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_rcc.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_rng.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_rtc.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_sai.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_sdio.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_spi.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_syscfg.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_tim.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_usart.h" />
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_wwdg.h" />
+    <ClInclude Include="Code\STLIB\stm32f4xx_conf.h" />
+    <ClInclude Include="Code\STLIB\stm32f4xx_it.h" />
+    <ClInclude Include="Code\Task_Setting.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_BSP\bsp.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\app_cfg.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\cpu_cfg.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\includes.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\lib_cfg.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\os_app_hooks.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\os_cfg.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\os_cfg_app.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_III\os_cpu.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_III\Source\os.h" />
+    <ClInclude Include="Code\uCOSIII\uCOS_III\Source\os_type.h" />
+    <ClInclude Include="Code\uCOSIII\uC_CPU\cpu.h" />
+    <ClInclude Include="Code\uCOSIII\uC_CPU\cpu_core.h" />
+    <ClInclude Include="Code\uCOSIII\uC_CPU\cpu_def.h" />
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_ascii.h" />
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_def.h" />
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_math.h" />
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_mem.h" />
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_str.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\APP\ANO_DT\ANO_DT.c" />
+    <ClCompile Include="Code\APP\Control\PID\PID_Control.c" />
+    <ClCompile Include="Code\APP\Control\PID\PID_forward.c" />
+    <ClCompile Include="Code\APP\Control\PID\PID_Parameter.c" />
+    <ClCompile Include="Code\APP\Control\Run_Task.c" />
+    <ClCompile Include="Code\APP\DataStructure\Queue\Queue.c" />
+    <ClCompile Include="Code\APP\Display\Display.c" />
+    <ClCompile Include="Code\APP\IMU\IMU.c" />
+    <ClCompile Include="Code\APP\Math\My_Math.c" />
+    <ClCompile Include="Code\APP\Math\Vect\Vect.c" />
+    <ClCompile Include="Code\APP\Sensor_Param\Sensor_Param.c" />
+    <ClCompile Include="Code\APP\Task_Loop\Task_Loop.c" />
+    <ClCompile Include="Code\APP\Uart_Command\Uart_Command.c" />
+    <ClCompile Include="Code\APP\Uart_Command\Uart_Command_Dispose.c" />
+    <ClCompile Include="Code\BSP\AK8975\AK8975.c" />
+    <ClCompile Include="Code\BSP\BEEP\BEEP.c" />
+    <ClCompile Include="Code\BSP\Encoder\Encoder.c" />
+    <ClCompile Include="Code\BSP\KEY\KEY.c" />
+    <ClCompile Include="Code\BSP\LED\LED.c" />
+    <ClCompile Include="Code\BSP\MCU\CAN\can.c" />
+    <ClCompile Include="Code\BSP\MCU\FLASH\stmflash.c" />
+    <ClCompile Include="Code\BSP\MCU\IIC_Soft\IIC_Soft.c" />
+    <ClCompile Include="Code\BSP\MCU\SysTick\SysTick.c" />
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_1.c" />
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_2.c" />
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_3.c" />
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_4.c" />
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_5.c" />
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_6.c" />
+    <ClCompile Include="Code\BSP\MCU\UART\usart2.c" />
+    <ClCompile Include="Code\BSP\MCU\UART\usart3.c" />
+    <ClCompile Include="Code\BSP\MCU\UART\uart4.c" />
+    <ClCompile Include="Code\BSP\Motor_Drive\Moto_Drive.c" />
+    <ClCompile Include="Code\BSP\MPU6050\MPU6050.c" />
+    <ClCompile Include="Code\BSP\My_BSP.c" />
+    <ClCompile Include="Code\BSP\OLED\OLED.c" />
+    <ClCompile Include="Code\BSP\SYSTEM\sys\sys.c" />
+    <ClCompile Include="Code\BSP\SYSTEM\usart\Printf_Uart.c" />
+    <ClCompile Include="Code\BSP\Time\Time.c" />
+    <ClCompile Include="Code\main.c" />
+    <ClCompile Include="Code\STLIB\CMSIS\system_stm32f4xx.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\misc.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_adc.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_can.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_crc.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_cryp.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_cryp_aes.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_cryp_des.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_cryp_tdes.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dac.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dbgmcu.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dcmi.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dma.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dma2d.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_exti.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_flash.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_flash_ramfunc.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_fmc.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_fsmc.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_gpio.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_hash.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_hash_md5.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_hash_sha1.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_i2c.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_iwdg.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_ltdc.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_pwr.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_rcc.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_rng.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_rtc.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_sai.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_sdio.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_spi.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_syscfg.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_tim.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_usart.c" />
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_wwdg.c" />
+    <ClCompile Include="Code\STLIB\stm32f4xx_it.c" />
+    <ClCompile Include="Code\Task_Setting.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_BSP\bsp.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_CONFIG\os_app_hooks.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\os_cpu_c.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_cfg_app.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_core.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_dbg.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_flag.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_int.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_mem.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_msg.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_mutex.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_pend_multi.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_prio.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_q.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_sem.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_stat.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_task.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_tick.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_time.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_tmr.c" />
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_var.c" />
+    <ClCompile Include="Code\uCOSIII\uC_CPU\cpu_c.c" />
+    <ClCompile Include="Code\uCOSIII\uC_CPU\cpu_core.c" />
+    <ClCompile Include="Code\uCOSIII\uC_LIB\lib_ascii.c" />
+    <ClCompile Include="Code\uCOSIII\uC_LIB\lib_math.c" />
+    <ClCompile Include="Code\uCOSIII\uC_LIB\lib_mem.c" />
+    <ClCompile Include="Code\uCOSIII\uC_LIB\lib_str.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\STLIB\CMSIS\STARTUP\startup_stm32f40_41xxx.s" />
+    <None Include="Code\uCOSIII\uCOS_III\os_cpu_a.asm" />
+    <None Include="Code\uCOSIII\uC_CPU\cpu_a.asm" />
+    <None Include="Code\uCOSIII\uC_LIB\lib_mem_a.asm" />
+    <None Include="Project\STM32_Demo.uvprojx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Code\STLIB\DSPLIB\arm_cortexM4lf_math.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

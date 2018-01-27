@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "stm32f4xx.h": "c",
+        "stm32f4xx_gpio.h": "c",
+        "mpu6050.h": "c",
+        "sensor_param.h": "c",
+        "beep.c": "cpp",
+        "stm32f4xx_rcc.c": "cpp",
+        "stm32f4xx_rcc.h": "c"
+    }
+}

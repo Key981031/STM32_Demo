@@ -1,17 +1,823 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="头文件">
+    <Filter Include="APP">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="资源文件">
+    <Filter Include="BSP">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="STLIB">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="uCOSIII">
+      <UniqueIdentifier>{9827bd1b-26fe-4dc5-acef-6baae98f3801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project">
+      <UniqueIdentifier>{31b84570-f02f-4ccc-8d77-1fda0e05f624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\SYSTEM">
+      <UniqueIdentifier>{715dd48f-07a8-4774-a876-11d114fd2793}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\SYSTEM\delay">
+      <UniqueIdentifier>{80417d9a-c66d-4d2f-9b70-fedafccc461c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\SYSTEM\usart">
+      <UniqueIdentifier>{f0870599-f404-47c9-8700-edf0585df10f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\SYSTEM\sys">
+      <UniqueIdentifier>{71b60d45-c341-49b5-bd85-41383c29d19b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STLIB\CMSIS">
+      <UniqueIdentifier>{328e9f08-f3a7-4b8a-bac2-4e734424518c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STLIB\FWLIB">
+      <UniqueIdentifier>{3795479d-6c9b-4671-8c53-a1e02161435c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STLIB\DSPLIB">
+      <UniqueIdentifier>{c2aa53a6-b4de-432f-af9d-bf76cb53fb4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STLIB\CMSIS\CORE">
+      <UniqueIdentifier>{e1e6ab7d-7522-4133-ad47-12174a87f631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STLIB\CMSIS\StartUp">
+      <UniqueIdentifier>{46fe6d39-d3ae-425e-a65e-340a0c0eabec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STLIB\FWLIB\inc">
+      <UniqueIdentifier>{6afbd6c5-cf30-4047-8bec-869ac9c6499d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STLIB\FWLIB\src">
+      <UniqueIdentifier>{5374760f-af93-4242-8161-7b46dd07c0e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STLIB\DSPLIB\inc">
+      <UniqueIdentifier>{37dddff9-140d-4077-ac54-f6d3ab29ef3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\DataStructure">
+      <UniqueIdentifier>{1026d952-f70c-4b81-b367-aeda49431990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\Math">
+      <UniqueIdentifier>{4361d779-841f-4c0a-8300-0ac720226197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\Math\Vect">
+      <UniqueIdentifier>{0a036f43-5065-4c7c-a404-418b9b51517d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\MCU">
+      <UniqueIdentifier>{e898dc41-34e5-4e2d-b239-c3b95e1375ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\MCU\CAN">
+      <UniqueIdentifier>{7e37190f-dd32-456b-ab96-5f0247f386d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\MCU\Timer">
+      <UniqueIdentifier>{12940d9a-6478-41bc-9067-a298e8a55e39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\MCU\UART">
+      <UniqueIdentifier>{a3fbf1a2-6a16-4d8e-91a4-9be7164d1104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\MCU\FLASH">
+      <UniqueIdentifier>{c8074705-2102-44f9-8f83-3a2e2aeaf94d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uCOSIII\uCOS_BSP">
+      <UniqueIdentifier>{f709311d-f830-42bf-a39e-09402336adea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uCOSIII\uCOS_LIB">
+      <UniqueIdentifier>{a6aa2e60-9831-45ec-bfac-04704da36f68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uCOSIII\uCOS_CPU">
+      <UniqueIdentifier>{2e98a07c-a77c-42b6-863e-68901e4f17e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uCOSIII\uCOS_CONFIG">
+      <UniqueIdentifier>{739e1c32-d766-4041-9636-f57d66930505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="uCOSIII\uCOS_III">
+      <UniqueIdentifier>{275de633-270f-4e6b-962b-a973c1705918}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\Motor_Drive">
+      <UniqueIdentifier>{2c6c3b73-b84c-4cbf-9efe-8bbf565fb091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\Control">
+      <UniqueIdentifier>{8627710a-d678-47fd-bdcb-39941b99ba03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\Control\PID">
+      <UniqueIdentifier>{ad718b3f-12f5-40ca-915e-482dedbd64dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\Uart_Command">
+      <UniqueIdentifier>{ace0e0f7-ce4e-417f-aac3-3cdac96d26c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\ANO_DT">
+      <UniqueIdentifier>{edcbfb03-f180-4150-bd53-2ab4eaf06d88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\Task_Loop">
+      <UniqueIdentifier>{598f8628-135f-428e-98fa-f60be8443593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\BEEP">
+      <UniqueIdentifier>{0b3b633c-5028-42cd-b694-679f38b4fb33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\LED">
+      <UniqueIdentifier>{ec319152-8430-4dda-b3eb-ee17f77d021b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\MCU\SysTick">
+      <UniqueIdentifier>{0fc39e7e-b953-449d-b456-15cc4da186cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\Time">
+      <UniqueIdentifier>{4104061d-4c21-4f69-8351-4a07f78941e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\OLED">
+      <UniqueIdentifier>{a7916658-4b29-4098-ac0e-36c2cd4ac271}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\Display">
+      <UniqueIdentifier>{6383c0f4-f8fc-4ab8-bb87-92ef2cad3ae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\MCU\IIC_Soft">
+      <UniqueIdentifier>{c6989d3e-1b00-4d5f-acf7-6840cad6c53e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\MPU6050">
+      <UniqueIdentifier>{4f542654-522c-4412-8ec4-210817a8e593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\Sensor_Param">
+      <UniqueIdentifier>{9817ea7d-955c-41ac-9453-60161d1fcd46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\IMU">
+      <UniqueIdentifier>{6313ed09-5913-4b73-9c6a-9c8ba1d0b8b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\AK8975">
+      <UniqueIdentifier>{0c151474-be5b-4d82-86b6-e79c58a181ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\Key">
+      <UniqueIdentifier>{9add4308-609f-4908-b06b-d00deae970a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP\RoboModule">
+      <UniqueIdentifier>{ac40963e-cbcf-4d3a-9852-ad1f720aa316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP\Encoder">
+      <UniqueIdentifier>{8a9c4a5e-7547-41f5-846d-6909d9167129}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\BSP\SYSTEM\delay\delay.h">
+      <Filter>BSP\SYSTEM\delay</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\SYSTEM\sys\sys.h">
+      <Filter>BSP\SYSTEM\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\CMSIS\CORE\core_cm4.h">
+      <Filter>STLIB\CMSIS\CORE</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\CMSIS\CORE\core_cm4_simd.h">
+      <Filter>STLIB\CMSIS\CORE</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\CMSIS\CORE\core_cmFunc.h">
+      <Filter>STLIB\CMSIS\CORE</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\CMSIS\CORE\core_cmInstr.h">
+      <Filter>STLIB\CMSIS\CORE</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\CMSIS\stm32f4xx.h">
+      <Filter>STLIB\CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\CMSIS\system_stm32f4xx.h">
+      <Filter>STLIB\CMSIS</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\misc.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_adc.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_can.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_crc.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_cryp.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dac.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dbgmcu.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dcmi.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dma.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_dma2d.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_exti.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_flash.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_flash_ramfunc.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_fmc.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_fsmc.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_gpio.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_hash.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_i2c.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_iwdg.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_ltdc.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_pwr.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_rcc.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_rng.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_rtc.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_sai.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_sdio.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_spi.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_syscfg.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_tim.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_usart.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\FWLIB\inc\stm32f4xx_wwdg.h">
+      <Filter>STLIB\FWLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\arm_common_tables.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\arm_const_structs.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\arm_math.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm0.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm0plus.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm3.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm4.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cm4_simd.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cmFunc.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_cmInstr.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_sc000.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\DSPLIB\Include\core_sc300.h">
+      <Filter>STLIB\DSPLIB\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\DataStructure\Queue\Queue.h">
+      <Filter>APP\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Math\My_Math.h">
+      <Filter>APP\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Math\Vect\Vect.h">
+      <Filter>APP\Math\Vect</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\MCU\CAN\can.h">
+      <Filter>BSP\MCU\CAN</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\MCU\FLASH\stmflash.h">
+      <Filter>BSP\MCU\FLASH</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\SYSTEM\usart\Printf_Uart.h">
+      <Filter>BSP\SYSTEM\usart</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\SYSTEM\DataConverTypeDef.h">
+      <Filter>BSP\SYSTEM</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\SYSTEM\My_Flag.h">
+      <Filter>BSP\SYSTEM</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\My_BSP.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\stm32f4xx_conf.h">
+      <Filter>STLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\STLIB\stm32f4xx_it.h">
+      <Filter>STLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Task_Setting.h" />
+    <ClInclude Include="Code\uCOSIII\uC_CPU\cpu.h">
+      <Filter>uCOSIII\uCOS_CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uC_CPU\cpu_core.h">
+      <Filter>uCOSIII\uCOS_CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uC_CPU\cpu_def.h">
+      <Filter>uCOSIII\uCOS_CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_ascii.h">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_def.h">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_math.h">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_mem.h">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uC_LIB\lib_str.h">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_BSP\bsp.h">
+      <Filter>uCOSIII\uCOS_BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\app_cfg.h">
+      <Filter>uCOSIII\uCOS_CONFIG</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\cpu_cfg.h">
+      <Filter>uCOSIII\uCOS_CONFIG</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\includes.h">
+      <Filter>uCOSIII\uCOS_CONFIG</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\lib_cfg.h">
+      <Filter>uCOSIII\uCOS_CONFIG</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\os_app_hooks.h">
+      <Filter>uCOSIII\uCOS_CONFIG</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\os_cfg.h">
+      <Filter>uCOSIII\uCOS_CONFIG</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_CONFIG\os_cfg_app.h">
+      <Filter>uCOSIII\uCOS_CONFIG</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_III\os_cpu.h">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_III\Source\os.h">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\uCOSIII\uCOS_III\Source\os_type.h">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Control\PID\PID_Parameter.h">
+      <Filter>APP\Control\PID</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Control\PID\PID_Control.h">
+      <Filter>APP\Control\PID</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\MCU\Timer\Timer.h">
+      <Filter>BSP\MCU\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\MCU\UART\usart3.h">
+      <Filter>BSP\MCU\UART</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\MCU\UART\uart4.h">
+      <Filter>BSP\MCU\UART</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Control\PID\PID_forward.h">
+      <Filter>APP\Control\PID</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Uart_Command\Uart_Command.h">
+      <Filter>APP\Uart_Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Uart_Command\Uart_Command_Dispose.h">
+      <Filter>APP\Uart_Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\MCU\UART\usart2.h">
+      <Filter>BSP\MCU\UART</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\ANO_DT\ANO_DT.h">
+      <Filter>APP\ANO_DT</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\ANO_DT\ANO_DT_User_Settings.h">
+      <Filter>APP\ANO_DT</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Task_Loop\Task_Loop.h">
+      <Filter>APP\Task_Loop</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\BEEP\BEEP.h">
+      <Filter>BSP\BEEP</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\LED\LED.h">
+      <Filter>BSP\LED</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\MCU\SysTick\SysTick.h">
+      <Filter>BSP\MCU\SysTick</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\Time\Time.h">
+      <Filter>BSP\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\Motor_Drive\Moto_Drive.h">
+      <Filter>BSP\Motor_Drive</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\OLED\OLED_Fonts.h">
+      <Filter>BSP\OLED</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\OLED\OLED.h">
+      <Filter>BSP\OLED</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Display\Display.h">
+      <Filter>APP\Display</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\MCU\IIC_Soft\IIC_Soft.h">
+      <Filter>BSP\MCU\IIC_Soft</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\MPU6050\MPU6050.h">
+      <Filter>BSP\MPU6050</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\Sensor_Param\Sensor_Param.h">
+      <Filter>APP\Sensor_Param</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\APP\IMU\IMU.h">
+      <Filter>APP\IMU</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\AK8975\AK8975.h">
+      <Filter>BSP\AK8975</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\Encoder\Encoder.h">
+      <Filter>BSP\Encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\BSP\KEY\KEY.h">
+      <Filter>BSP\Key</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\BSP\SYSTEM\sys\sys.c">
+      <Filter>BSP\SYSTEM\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\CMSIS\system_stm32f4xx.c">
+      <Filter>STLIB\CMSIS</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\misc.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_adc.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_can.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_crc.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_cryp.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_cryp_aes.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_cryp_des.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_cryp_tdes.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dac.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dbgmcu.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dcmi.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dma.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_dma2d.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_exti.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_flash.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_flash_ramfunc.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_fmc.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_fsmc.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_gpio.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_hash.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_hash_md5.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_hash_sha1.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_i2c.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_iwdg.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_ltdc.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_pwr.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_rcc.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_rng.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_rtc.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_sai.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_sdio.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_spi.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_syscfg.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_tim.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_usart.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\FWLIB\src\stm32f4xx_wwdg.c">
+      <Filter>STLIB\FWLIB\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\DataStructure\Queue\Queue.c">
+      <Filter>APP\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Math\Vect\Vect.c">
+      <Filter>APP\Math\Vect</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\FLASH\stmflash.c">
+      <Filter>BSP\MCU\FLASH</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\SYSTEM\usart\Printf_Uart.c">
+      <Filter>BSP\SYSTEM\usart</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\STLIB\stm32f4xx_it.c">
+      <Filter>STLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\main.c" />
+    <ClCompile Include="Code\uCOSIII\uC_CPU\cpu_c.c">
+      <Filter>uCOSIII\uCOS_CPU</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uC_CPU\cpu_core.c">
+      <Filter>uCOSIII\uCOS_CPU</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uC_LIB\lib_ascii.c">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uC_LIB\lib_math.c">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uC_LIB\lib_mem.c">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uC_LIB\lib_str.c">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_BSP\bsp.c">
+      <Filter>uCOSIII\uCOS_BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_CONFIG\os_app_hooks.c">
+      <Filter>uCOSIII\uCOS_CONFIG</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\os_cpu_c.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_cfg_app.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_core.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_dbg.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_flag.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_int.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_mem.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_msg.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_mutex.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_pend_multi.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_prio.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_q.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_sem.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_stat.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_task.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_tick.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_time.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_tmr.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\uCOSIII\uCOS_III\Source\os_var.c">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Control\PID\PID_Parameter.c">
+      <Filter>APP\Control\PID</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\My_BSP.c">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Control\PID\PID_Control.c">
+      <Filter>APP\Control\PID</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Task_Setting.c" />
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_2.c">
+      <Filter>BSP\MCU\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_3.c">
+      <Filter>BSP\MCU\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_6.c">
+      <Filter>BSP\MCU\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\UART\usart3.c">
+      <Filter>BSP\MCU\UART</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\UART\uart4.c">
+      <Filter>BSP\MCU\UART</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Control\PID\PID_forward.c">
+      <Filter>APP\Control\PID</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\CAN\can.c">
+      <Filter>BSP\MCU\CAN</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Uart_Command\Uart_Command.c">
+      <Filter>APP\Uart_Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Uart_Command\Uart_Command_Dispose.c">
+      <Filter>APP\Uart_Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Control\Run_Task.c">
+      <Filter>APP\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Math\My_Math.c">
+      <Filter>APP\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\UART\usart2.c">
+      <Filter>BSP\MCU\UART</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\ANO_DT\ANO_DT.c">
+      <Filter>APP\ANO_DT</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_1.c">
+      <Filter>BSP\MCU\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Task_Loop\Task_Loop.c">
+      <Filter>APP\Task_Loop</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\BEEP\BEEP.c">
+      <Filter>BSP\BEEP</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\LED\LED.c">
+      <Filter>BSP\LED</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\SysTick\SysTick.c">
+      <Filter>BSP\MCU\SysTick</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\Time\Time.c">
+      <Filter>BSP\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\Motor_Drive\Moto_Drive.c">
+      <Filter>BSP\Motor_Drive</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_5.c">
+      <Filter>BSP\MCU\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\Timer\Timer_4.c">
+      <Filter>BSP\MCU\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\OLED\OLED.c">
+      <Filter>BSP\OLED</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Display\Display.c">
+      <Filter>APP\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MCU\IIC_Soft\IIC_Soft.c">
+      <Filter>BSP\MCU\IIC_Soft</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\MPU6050\MPU6050.c">
+      <Filter>BSP\MPU6050</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\Sensor_Param\Sensor_Param.c">
+      <Filter>APP\Sensor_Param</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\APP\IMU\IMU.c">
+      <Filter>APP\IMU</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\AK8975\AK8975.c">
+      <Filter>BSP\AK8975</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\Encoder\Encoder.c">
+      <Filter>BSP\Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\BSP\KEY\KEY.c">
+      <Filter>BSP\Key</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Code\STLIB\CMSIS\STARTUP\startup_stm32f40_41xxx.s">
+      <Filter>STLIB\CMSIS\StartUp</Filter>
+    </None>
+    <None Include="Code\uCOSIII\uC_CPU\cpu_a.asm">
+      <Filter>uCOSIII\uCOS_CPU</Filter>
+    </None>
+    <None Include="Code\uCOSIII\uC_LIB\lib_mem_a.asm">
+      <Filter>uCOSIII\uCOS_LIB</Filter>
+    </None>
+    <None Include="Code\uCOSIII\uCOS_III\os_cpu_a.asm">
+      <Filter>uCOSIII\uCOS_III</Filter>
+    </None>
+    <None Include="Project\STM32_Demo.uvprojx">
+      <Filter>Project</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Code\STLIB\DSPLIB\arm_cortexM4lf_math.lib">
+      <Filter>STLIB\DSPLIB</Filter>
+    </Library>
   </ItemGroup>
 </Project>

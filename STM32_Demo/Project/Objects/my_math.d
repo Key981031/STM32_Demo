@@ -1,0 +1,11 @@
+.\objects\my_math.o: ..\Code\APP\Math\My_Math.c
+.\objects\my_math.o: ..\Code\APP\Math\My_Math.h
+.\objects\my_math.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\my_math.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\my_math.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\my_math.o: ..\Code\STLIB\DSPLIB\Include\arm_math.h
+.\objects\my_math.o: ..\Code\STLIB\DSPLIB\Include\core_cm4.h
+.\objects\my_math.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\my_math.o: ..\Code\STLIB\CMSIS\CORE\core_cmInstr.h
+.\objects\my_math.o: ..\Code\STLIB\CMSIS\CORE\core_cmFunc.h
+.\objects\my_math.o: ..\Code\STLIB\CMSIS\CORE\core_cm4_simd.h
